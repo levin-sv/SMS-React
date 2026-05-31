@@ -1,0 +1,11 @@
+Open https://app.diagrams.net/ and recreate the ERD from docs/ERD.md
+Use Crow's Foot notation with these entities:
+- Warehouse (PK: warehouseCode)
+- Product (PK: productCode, FK: warehouseCode)
+- StockTransaction (PK: transactionId, FK: productCode, FK: warehouseCode)
+- User (PK: userId)
+
+Relationships:
+Warehouse 1---* Product
+Warehouse 1---* StockTransaction
+Product 1---* StockTransaction
